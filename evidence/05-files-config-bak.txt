@@ -1,0 +1,3 @@
+# old config backup, do not share
+db_user=admin
+db_password=Summer2026

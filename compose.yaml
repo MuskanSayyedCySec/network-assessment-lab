@@ -1,0 +1,51 @@
+name: netlab
+
+networks:
+  labnet:
+    driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+
+services:
+  scanner:
+    build: ./scanner
+    command: ["sleep", "infinity"]
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    networks:
+      labnet:
+        ipv4_address: 172.30.0.5
+
+  web:
+    image: nginx:alpine
+    networks:
+      labnet:
+        ipv4_address: 172.30.0.10
+
+  cache:
+    image: redis:7-alpine
+    command: ["redis-server", "--protected-mode", "no"]
+    networks:
+      labnet:
+        ipv4_address: 172.30.0.20
+
+  files:
+    image: python:3.13-slim
+    working_dir: /srv
+    command: ["python", "-m", "http.server", "8000"]
+    volumes:
+      - ./lab-files:/srv:ro
+    networks:
+      labnet:
+        ipv4_address: 172.30.0.30
+
+  app:
+    image: flask-app:hardened
+    environment:
+      SECRET_KEY: ${LAB_SECRET_KEY:?LAB_SECRET_KEY must be set}
+    networks:
+      labnet:
+        ipv4_address: 172.30.0.40

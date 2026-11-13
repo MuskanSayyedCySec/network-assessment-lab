@@ -1,0 +1,49 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-11-13 19:02 UTC
+Nmap scan report for netlab-web-1.netlab_labnet (172.30.0.10)
+Host is up (0.000024s latency).
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   open   http       nginx 1.31.8
+|_http-server-header: nginx/1.31.8
+|_http-title: Welcome to nginx!
+6379/tcp closed redis
+8000/tcp closed http-alt
+8080/tcp closed http-proxy
+MAC Address: B2:E8:75:CF:A6:0E (Unknown)
+
+Nmap scan report for netlab-cache-1.netlab_labnet (172.30.0.20)
+Host is up (0.00019s latency).
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   closed http
+6379/tcp open   redis      Redis key-value store 7.4.12
+8000/tcp closed http-alt
+8080/tcp closed http-proxy
+MAC Address: BE:17:D3:7F:C7:CC (Unknown)
+
+Nmap scan report for netlab-files-1.netlab_labnet (172.30.0.30)
+Host is up (0.000017s latency).
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   closed http
+6379/tcp closed redis
+8000/tcp open   http       SimpleHTTPServer 0.6 (Python 3.13.18)
+|_http-server-header: SimpleHTTP/0.6 Python/3.13.18
+|_http-title: Directory listing for /
+8080/tcp closed http-proxy
+MAC Address: 3A:A5:F4:9C:72:5B (Unknown)
+
+Nmap scan report for netlab-app-1.netlab_labnet (172.30.0.40)
+Host is up (0.000015s latency).
+
+PORT     STATE  SERVICE  VERSION
+80/tcp   closed http
+6379/tcp closed redis
+8000/tcp closed http-alt
+8080/tcp open   http     Gunicorn
+|_http-server-header: gunicorn
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+MAC Address: 8E:11:15:A6:2B:86 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 4 IP addresses (4 hosts up) scanned in 6.75 seconds

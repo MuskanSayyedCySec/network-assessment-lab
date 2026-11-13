@@ -1,0 +1,15 @@
+# Server
+redis_version:7.4.12
+redis_git_sha1:00000000
+redis_git_dirty:0
+redis_build_id:6d565d4e3893fa59
+redis_mode:standalone
+os:Linux 7.0.14-linuxkit aarch64
+arch_bits:64
+monotonic_clock:POSIX clock_gettime
+multiplexing_api:epoll
+atomicvar_api:c11-builtin
+gcc_version:14.2.0
+process_id:1
+process_supervised:no
+run_id:e349c99dcb86f3e269454316259a5968c5378329

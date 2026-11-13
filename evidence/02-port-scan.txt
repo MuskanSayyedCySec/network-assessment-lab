@@ -1,0 +1,30 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-11-13 18:44 UTC
+Nmap scan report for netlab-web-1.netlab_labnet (172.30.0.10)
+Host is up (0.0000060s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: B2:E8:75:CF:A6:0E (Unknown)
+
+Nmap scan report for netlab-cache-1.netlab_labnet (172.30.0.20)
+Host is up (0.0000090s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE
+6379/tcp open  redis
+MAC Address: BE:17:D3:7F:C7:CC (Unknown)
+
+Nmap scan report for netlab-files-1.netlab_labnet (172.30.0.30)
+Host is up (0.0000060s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE
+8000/tcp open  http-alt
+MAC Address: 3A:A5:F4:9C:72:5B (Unknown)
+
+Nmap scan report for netlab-app-1.netlab_labnet (172.30.0.40)
+Host is up (0.0000060s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE
+8080/tcp open  http-proxy
+MAC Address: 8E:11:15:A6:2B:86 (Unknown)
+
+Nmap done: 4 IP addresses (4 hosts up) scanned in 2.43 seconds

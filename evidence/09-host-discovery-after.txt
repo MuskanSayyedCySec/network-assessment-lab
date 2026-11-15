@@ -1,0 +1,16 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-11-15 15:02 UTC
+Nmap scan report for 172.30.0.1
+Host is up (0.000097s latency).
+MAC Address: 66:B8:6D:F8:6C:29 (Unknown)
+Nmap scan report for netlab-web-1.netlab_labnet (172.30.0.10)
+Host is up (0.000024s latency).
+MAC Address: B2:E8:75:CF:A6:0E (Unknown)
+Nmap scan report for netlab-cache-1.netlab_labnet (172.30.0.20)
+Host is up (0.000055s latency).
+MAC Address: 46:9D:47:77:22:62 (Unknown)
+Nmap scan report for netlab-app-1.netlab_labnet (172.30.0.40)
+Host is up (0.000092s latency).
+MAC Address: 02:BB:C5:47:22:E4 (Unknown)
+Nmap scan report for e5b894b3b731 (172.30.0.5)
+Host is up.
+Nmap done: 256 IP addresses (5 hosts up) scanned in 1.90 seconds

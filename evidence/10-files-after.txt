@@ -1,0 +1,1 @@
+curl exit code 28 (28 means timed out, nothing there)

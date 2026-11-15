@@ -1,0 +1,8 @@
+== Stranger PING ==
+NOAUTH Authentication required.
+
+== Stranger GET ==
+NOAUTH Authentication required.
+
+== Authorised PING ==
+PONG

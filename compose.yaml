@@ -21,26 +21,19 @@ services:
 
   web:
     image: nginx:alpine
+    volumes:
+      - ./nginx/security.conf:/etc/nginx/conf.d/security.conf:ro
+      - ./nginx/html:/usr/share/nginx/html:ro
     networks:
       labnet:
         ipv4_address: 172.30.0.10
 
   cache:
     image: redis:7-alpine
-    command: ["redis-server", "--protected-mode", "no"]
+    command: ["redis-server", "--requirepass", "${LAB_REDIS_PASSWORD:?LAB_REDIS_PASSWORD must be set}", "--protected-mode", "yes"]
     networks:
       labnet:
         ipv4_address: 172.30.0.20
-
-  files:
-    image: python:3.13-slim
-    working_dir: /srv
-    command: ["python", "-m", "http.server", "8000"]
-    volumes:
-      - ./lab-files:/srv:ro
-    networks:
-      labnet:
-        ipv4_address: 172.30.0.30
 
   app:
     image: flask-app:hardened
